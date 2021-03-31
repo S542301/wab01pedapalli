@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  - let cars=div[{carsname:"Rolls-Royce",brand:"BMW",manufacturing_year:"1971"},{carsname:"Lincoln",brand:"Ford",manufacturing_year:"1917"},{carsname="Kia",brand:"Hyundai",manufacturing_year:"1944"}] 
+  div(class="container-fluid mt-3")
+  div(class="row")
+      each cars,index in cars 
+        div(class="col-sm-4 big-warning m-1 p-3" onclick=`buy(${index})`) #{cars.carsname} - #{cars.brand} - #{cars.manufacturing_year}
+  script.
+
+    function buy(itemNo)
+    {
+        alert(`You purchased Item ${itemNo+1}`)
+    }   
+
