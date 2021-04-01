@@ -26,7 +26,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cars', carsRouter);
 app.use('/stars',starsRouter);
-app.use('/slot'.slotRouter);
+app.use('/slot',slotRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
